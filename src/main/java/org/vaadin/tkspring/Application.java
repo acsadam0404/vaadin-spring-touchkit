@@ -21,7 +21,8 @@ public class Application {
         return new SpringAwareTouchKitServlet();
     }
 
-    // Stuff needed for widgetset CDN, not needed if using std widgetset
+    // Stuff needed for widgetset CDN, not needed if using std widgetset.
+    // Run priming build (mvn install) if (generated) resource is missing.
     @Bean
     public in.virit.WidgetSet viritinCdnInitializer() {
         return new in.virit.WidgetSet();

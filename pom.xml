@@ -58,6 +58,13 @@
             <groupId>com.vaadin.addon</groupId>
             <artifactId>vaadin-touchkit-agpl</artifactId>
             <version>4.0.2</version>
+            <exclusions>
+                <!-- For some reason latest touchkit depends on vaadin-themes, which is not needed -->
+                <exclusion>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>vaadin-themes</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.vaadin</groupId>
