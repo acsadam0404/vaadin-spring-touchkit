@@ -7,7 +7,7 @@ Integration to TouchKit is rather similar as with other add-ons, but for advance
    * Widgetset with TouchKit components (and theme)
        * Simple option using cdn.virit.in:
            * Add plugin to [pom.xml](https://github.com/mstahv/vaadin-spring-touchkit/blob/master/pom.xml#L90-L102)
-           * Add generated servlet filter to your configuration https://github.com/mstahv/vaadin-spring-touchkit/blob/master/src/main/java/org/vaadin/tkspring/Application.java#L24-L28
+           * Add generated servlet filter to your configuration https://github.com/mstahv/vaadin-spring-touchkit/blob/master/src/main/java/org/vaadin/tkspring/Application.java#L20-L25
        * Standard solution:
            * Add [vaadin-maven-plugn to pom.xml](https://github.com/mstahv/vaadin-spring-touchkit/blob/master/pom.xml#L103-L128)
            * Add @Widgetset annotation to your [UI class](https://github.com/mstahv/vaadin-spring-touchkit/blob/master/src/main/java/org/vaadin/tkspring/MainUI.java#L18-L20)
@@ -15,6 +15,6 @@ Integration to TouchKit is rather similar as with other add-ons, but for advance
     * Use dummy ["touchkit" theme](https://github.com/mstahv/vaadin-spring-touchkit/blob/master/src/main/java/org/vaadin/tkspring/MainUI.java#L16) (empty theme, TouhcKit default them comes from GWT module, saves quite a lot of bytes). vaadin-themes can be removed.
     * Use a specialized version of VaadinSpringServlet that has VaadinTouchKitServlet feature build into it. This will make many features like home screen icons, "full screen mode", offline mode etc. possible.
         * Define [the special servlet](https://github.com/mstahv/vaadin-spring-touchkit/blob/master/src/main/java/org/vaadin/tkspring/SpringAwareTouchKitServlet.java) (feel free to copy paste this example)
-        * Configure your application to use it instead of default SpringVaadinServlet. In Boot app e.g. with [this](https://github.com/mstahv/vaadin-spring-touchkit/blob/master/src/main/java/org/vaadin/tkspring/Application.java#L19-L22) and [this](https://github.com/mstahv/vaadin-spring-touchkit/blob/master/src/main/java/org/vaadin/tkspring/Application.java#L11-L12) code snippet to your configuration.
+        * Configure your application to use it instead of default SpringVaadinServlet. In Boot app e.g. with [this](https://github.com/mstahv/vaadin-spring-touchkit/blob/master/src/main/java/org/vaadin/tkspring/Application.java#L15-L18) will do the trick.
 
 This example uses Spring Boot, but the setup logically the same with basic Spring project.
